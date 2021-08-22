@@ -1,0 +1,34 @@
+<section id='home-page' class='background-image'>
+    <div class='home-container'>
+        <div class='info'>
+            <h1>Discover Your Perfect Home</h1>
+            <h2>The Best Real Estate Deals</h2>
+        </div>
+    </div>
+</section>
+
+<section id='top-houses'>
+    <h1>Top Houses</h1>
+    <div class='houses'>
+        {{#each offers}}
+
+            <div class='card-home'>
+                <h2>{{this.name}}</h2>
+                <div class='cta-container'>
+                    <a
+                        href='/offers/details/{{this._id}}'
+                        class='details-link'
+                    >Details</a>
+                </div>
+                <div class='card_image'><img src='{{this.imgUrl}}' /></div>
+            </div>
+        {{else}}
+            <div class='no-data-container'>
+                <p class='no-data'>There are no housing offers found...</p>
+            </div>
+        {{/each}}
+
+        <!-- If there are still no offers for housing in the database display: -->
+        <!---->
+    </div>
+</section>
